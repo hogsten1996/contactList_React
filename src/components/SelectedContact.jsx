@@ -1,6 +1,7 @@
+// SelectedContact.jsx
 import React, { useState, useEffect } from 'react';
 
-export default function SelectedContact({ selectedContactId, setSelectedContactId }){
+export default function SelectedContact({ selectedContactId, setSelectedContactId }) {
     const [contact, setContact] = useState(null);
 
     useEffect(() => {
@@ -26,9 +27,13 @@ export default function SelectedContact({ selectedContactId, setSelectedContactI
                     <h1>{contact.name}</h1>
                     <p>Email: {contact.email}</p>
                     <p>Phone: {contact.phone}</p>
+                    <p>Website: {contact.website}</p>
                 </div>
-            ) : ("Loading...")}
+            ) : (
+                "Loading..."
+            )}
         </div>
     );
 }
+
 
